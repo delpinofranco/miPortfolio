@@ -26,7 +26,21 @@ btnHambur.addEventListener("click", () => {
         nav.style.display = "none";
         menuresposive.style.position="fixed";
         menuresposive.style.top = "0";
-menuresposive.style.left = "0";
-menuresposive.style.height = "auto";
+        menuresposive.style.left = "0";
+        menuresposive.style.height = "auto";
     }
-});
+}
+
+
+
+)
+window.addEventListener("resize", () => {
+    // Si la pantalla es más ancha que 768px (o tu medida de desktop)
+    if (window.innerWidth > 768) {
+        // Limpiamos los estilos en línea para que el CSS tome el control de nuevo
+        menuresposive.style.display = "";
+        nav.style.display = "";
+        btnHambur.style.display = "";
+        btnX.style.display = "";
+    }
+});;
