@@ -1,3 +1,9 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto evita que el padding ensanche los divs */
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -115,24 +121,22 @@ header{
     margin: auto;
 }
 
-
 main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-   
-    margin-left: 250px;
-    min-height: 100vh; /* Asegura que el fondo cubra siempre la pantalla */
-    width: calc(100% - 250px);
-   
-    
-  
-   
+    margin-left: 250px; /* Espacio para la barra fija */
+    min-height: 100vh;
+    width: auto; /* Cambia esto de calc a auto */
 }
 
 .hero{
     
-    margin-top: 0;
+ width: 100%;
+    margin: 0; /* Asegúrate de que no tenga márgenes laterales */
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; /* Mejor usar el alto completo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,11 +144,7 @@ main {
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("./assets/img/d68a92e6-80ac-4fb9-8901-eb9c5b5ec1f9.png");
       
-    background-size: cover;
-     min-height: calc(100vh - 70px); /* Asegura que el fondo cubra siempre la pantalla */
-    width: 100%;
-   background-position: center;
-    background-repeat: no-repeat;
+
     
 }
 
@@ -260,21 +260,18 @@ main {
     font-size: 60px;
 }
 .footer {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-  margin-left: 265px;
-  margin-right: 10px;
-
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 265px; /* Cuidado aquí, debe ser consistente con el main */
+    margin-right: 15px;
+    margin-bottom: 20px; /* Añadí esto para que no pegue abajo */
+    padding: 20px;
     background-color: #1E293B;
-  color: #F1F5F9;
-  border-radius: 18px;
-   border-radius: 15px;
-    box-shadow: 10px   10px   10px   rgba(0,0,0,0.1);
- 
+    color: #F1F5F9;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
-
 
 
 
@@ -299,6 +296,7 @@ main {
         padding: 0;
         background-size: cover;
     }
+  
    
     .navresponsive{
         
@@ -389,7 +387,7 @@ main {
     .footer {
         display: flex;
         justify-content: center;
-       padding: 40px;
+        padding: 40px;
         margin-left: 0;
         text-align: center;
         
